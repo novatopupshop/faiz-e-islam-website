@@ -579,7 +579,7 @@ Hami-e-bekasan, kya kahega jahan, aapke dar se khali agar jayenge.</i></p>
     """<h1>About Faiz e Islam</h1><p>Faiz e Islam is a free Islamic learning platform. We aim to make the Quran, Durood, Duas, Kalimas and Salaat easy to read, listen to and understand — with Urdu and English translation, audio recitation and clear guides.</p>
 <h2>What we offer</h2><ul><li>The complete Holy Quran — all 114 Surahs with translation and audio.</li><li>Durood, the six Kalimas, and more than 20 daily duas.</li><li>Step-by-step guides to Salaat and Istikhara.</li><li>Islamic blogs, Naat lyrics and Wazaif.</li><li>Online Quran classes for children and adults.</li></ul>
 <h2>Our promise</h2><p>All resources on this site are free, with no subscription and no paywall. Running the platform has costs — hosting, domain and the time of our team — so donations are welcome, but they are never required to read or listen.</p>
-<p>Quran text and translations on this site are provided by <a href="https://alquran.cloud/">AlQuran.cloud</a>, and audio by the Islamic Network CDN. The Arabic of the Quran and the text of hadith are kept as they are; our own introductions, guides and answers are written freshly for this site.</p>""", "about.html"))
+<p>Quran text and translations on this site are provided by <a href="https://alquran.cloud/">AlQuran.cloud</a>, and audio by QuranicAudio.com. The Arabic of the Quran and the text of hadith are kept as they are; our own introductions, guides and answers are written freshly for this site.</p>""", "about.html"))
 
     write("contact.html", page("", "Contact Us", "Contact Faiz e Islam.",
     """<h1>Contact Us</h1><p>If you have a question, a correction, or a suggestion for the site, we would love to hear from you. Use the form below — it opens your email app with your message addressed to us.</p>
@@ -598,7 +598,7 @@ Hami-e-bekasan, kya kahega jahan, aapke dar se khali agar jayenge.</i></p>
     write("privacy-policy.html", page("", "Privacy Policy", "Privacy Policy of Faiz e Islam.",
     """<h1>Privacy Policy</h1><p>This website does not require an account, and we do not sell or share personal information.</p>
 <h2>What we collect</h2><p>We do not collect names, emails or locations through this site. If you email us through the contact page, we receive only what you choose to send, and we use it only to reply to you.</p>
-<h2>Cookies and third parties</h2><p>Quran audio is streamed from the Islamic Network CDN and Quran text from AlQuran.cloud. Those services may log the Surah or audio file requested, as any web server does. We do not run advertising or tracking of our own.</p>
+<h2>Cookies and third parties</h2><p>Quran audio is streamed from QuranicAudio.com and Quran text from AlQuran.cloud. Those services may log the Surah or audio file requested, as any web server does. We do not run advertising or tracking of our own.</p>
 <h2>Changes</h2><p>If this policy changes, the updated version will be published on this page.</p>""", "privacy-policy.html"))
 
     write("quran-classes.html", page("", "Online Quran Classes", "Learn Quran online with a teacher — Noorani Qaida, Nazra, Hifz and Tajweed.",
@@ -704,14 +704,14 @@ def build_surahs():
 <h1>Surah {esc(name)} — {esc(meaning)}</h1>
 <div class="facts"><span>Surah {n} of 114</span><span>{count} Ayahs</span><span>{'Makki' if rev=='Meccan' else 'Madani'}</span><span>Para {para}</span><span>Also known as: {esc(name)}</span></div>
 <p>{esc(overview)}</p>
-<div class="audio-box"><h2>Listen Online</h2><p>Qari: Mishary Rashid Alafasy. Source: Islamic Network CDN via AlQuran.cloud.</p>
-<audio controls preload="none" src="https://cdn.islamic.network/quran/audio/128/ar.alafasy/{n}.mp3"></audio>
-<p><a href="https://cdn.islamic.network/quran/audio/128/ar.alafasy/{n}.mp3">Download audio (MP3)</a></p></div>
+<div class="audio-box"><h2>Listen Online</h2><p>Qari: Mishary Rashid Alafasy. Source: QuranicAudio.com — complete Surah recording.</p>
+<audio controls preload="none" src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/{n:03d}.mp3"></audio>
+<p><a href="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/{n:03d}.mp3">Download audio (MP3)</a></p></div>
 <h2>Full text — Arabic, Urdu, English (verse by verse)</h2>{verses}
 <h2>Virtues and benefits</h2><ul>{''.join(f'<li>{esc(v)}</li>' for v in virtues)}</ul>
 <h2>Frequently Asked Questions</h2><div class="faq">{faq_html}</div>
 <p>{prev_link} &nbsp;|&nbsp; {next_link} &nbsp;|&nbsp; <a href="../al-quran.html">All 114 Surahs</a></p>
-<p class="notice">Quran Arabic text, Urdu translation (Junagarhi) and English translation (Sahih International): <a href="https://alquran.cloud/">AlQuran.cloud</a>. Audio: Islamic Network CDN.</p>"""
+<p class="notice">Quran Arabic text, Urdu translation (Junagarhi) and English translation (Sahih International): <a href="https://alquran.cloud/">AlQuran.cloud</a>. Audio: QuranicAudio.com (Mishary Rashid Alafasy).</p>"""
         write(f"al-quran/surah-{slug}.html",
               page("../", f"Surah {name} — Read and Listen Online",
                    f"Read Surah {name} with Arabic, Urdu and English translation and audio.",
